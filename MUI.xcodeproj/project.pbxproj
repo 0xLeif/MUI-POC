@@ -11,6 +11,12 @@
 		29535A5E257EE660005B2663 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A5D257EE660005B2663 /* ContentView.swift */; };
 		29535A60257EE663005B2663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29535A5F257EE663005B2663 /* Assets.xcassets */; };
 		29535A63257EE663005B2663 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29535A62257EE663005B2663 /* Preview Assets.xcassets */; };
+		29535A6D257EE6CF005B2663 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A6C257EE6CF005B2663 /* MetalView.swift */; };
+		29535A72257EE755005B2663 /* MetalRendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A71257EE754005B2663 /* MetalRendering.swift */; };
+		29535A75257F05FE005B2663 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 29535A74257F05FE005B2663 /* Shaders.metal */; };
+		29535A79257F0778005B2663 /* BasicMetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A78257F0778005B2663 /* BasicMetalRenderer.swift */; };
+		29535A7E257F0798005B2663 /* MetalRenderingVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A7D257F0798005B2663 /* MetalRenderingVertex.swift */; };
+		29535A82257F07F9005B2663 /* BasicMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29535A81257F07F9005B2663 /* BasicMetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		29535A5F257EE663005B2663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29535A62257EE663005B2663 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29535A64257EE663005B2663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29535A6C257EE6CF005B2663 /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		29535A71257EE754005B2663 /* MetalRendering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRendering.swift; sourceTree = "<group>"; };
+		29535A74257F05FE005B2663 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		29535A78257F0778005B2663 /* BasicMetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMetalRenderer.swift; sourceTree = "<group>"; };
+		29535A7D257F0798005B2663 /* MetalRenderingVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRenderingVertex.swift; sourceTree = "<group>"; };
+		29535A81257F07F9005B2663 /* BasicMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 		29535A5A257EE660005B2663 /* MUI */ = {
 			isa = PBXGroup;
 			children = (
+				29535A70257EE719005B2663 /* Metal */,
 				29535A5B257EE660005B2663 /* MUIApp.swift */,
 				29535A5D257EE660005B2663 /* ContentView.swift */,
 				29535A5F257EE663005B2663 /* Assets.xcassets */,
@@ -67,6 +80,67 @@
 				29535A62257EE663005B2663 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		29535A6B257EE681005B2663 /* MetalUI */ = {
+			isa = PBXGroup;
+			children = (
+				29535A85257F0803005B2663 /* Views */,
+				29535A6C257EE6CF005B2663 /* MetalView.swift */,
+			);
+			path = MetalUI;
+			sourceTree = "<group>";
+		};
+		29535A70257EE719005B2663 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				29535A86257F082E005B2663 /* MTKViewDeleagte */,
+				29535A6B257EE681005B2663 /* MetalUI */,
+				29535A87257F085D005B2663 /* Data */,
+				29535A89257F087F005B2663 /* Shaders */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		29535A77257F075C005B2663 /* Renderers */ = {
+			isa = PBXGroup;
+			children = (
+				29535A78257F0778005B2663 /* BasicMetalRenderer.swift */,
+			);
+			path = Renderers;
+			sourceTree = "<group>";
+		};
+		29535A85257F0803005B2663 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29535A81257F07F9005B2663 /* BasicMetalView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29535A86257F082E005B2663 /* MTKViewDeleagte */ = {
+			isa = PBXGroup;
+			children = (
+				29535A77257F075C005B2663 /* Renderers */,
+				29535A71257EE754005B2663 /* MetalRendering.swift */,
+			);
+			path = MTKViewDeleagte;
+			sourceTree = "<group>";
+		};
+		29535A87257F085D005B2663 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				29535A7D257F0798005B2663 /* MetalRenderingVertex.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		29535A89257F087F005B2663 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				29535A74257F05FE005B2663 /* Shaders.metal */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29535A72257EE755005B2663 /* MetalRendering.swift in Sources */,
+				29535A6D257EE6CF005B2663 /* MetalView.swift in Sources */,
 				29535A5E257EE660005B2663 /* ContentView.swift in Sources */,
 				29535A5C257EE660005B2663 /* MUIApp.swift in Sources */,
+				29535A75257F05FE005B2663 /* Shaders.metal in Sources */,
+				29535A7E257F0798005B2663 /* MetalRenderingVertex.swift in Sources */,
+				29535A79257F0778005B2663 /* BasicMetalRenderer.swift in Sources */,
+				29535A82257F07F9005B2663 /* BasicMetalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
