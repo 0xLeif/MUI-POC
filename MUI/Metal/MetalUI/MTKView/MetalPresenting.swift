@@ -27,6 +27,7 @@ public extension MetalPresenting {
         }
         
         self.renderer = renderer(forDevice: defaultDevice)
+        self.delegate = renderer
         self.configureMTKView()
     }
 }
