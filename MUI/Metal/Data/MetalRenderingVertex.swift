@@ -7,7 +7,7 @@
 
 import MetalKit
 
-struct MetalRenderingVertex {
-    var position: SIMD3<Float>
-    var color: SIMD4<Float>
+public struct MetalRenderingVertex {
+    public var position: SIMD3<Float>
+    public var color: SIMD4<Float>
 }

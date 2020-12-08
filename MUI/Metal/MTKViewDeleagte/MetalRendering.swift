@@ -7,7 +7,7 @@
 
 import MetalKit
 
-protocol MetalRendering: NSObject, MTKViewDelegate {
+public protocol MetalRendering: NSObject, MTKViewDelegate {
     var commandQueue: MTLCommandQueue? { get set }
     var renderPipelineState: MTLRenderPipelineState? { get set }
     var vertexBuffer: MTLBuffer? { get set }
@@ -32,7 +32,7 @@ protocol MetalRendering: NSObject, MTKViewDelegate {
     func draw(in view: MTKView)
 }
 
-extension MetalRendering {
+public extension MetalRendering {
     init(vertices: [MetalRenderingVertex], device: MTLDevice) {
         self.init()
         
