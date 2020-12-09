@@ -1,5 +1,6 @@
 # MUI-POC
 
+![Example](example.png)
 
 ### SwiftUI
 ```swift
