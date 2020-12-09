@@ -5,6 +5,7 @@
 //  Created by Zach Eriksen on 12/7/20.
 //
 
+import MetalUI
 import MetalKit
 
 class BasicMetalView: MTKView, MetalPresenting {
@@ -22,7 +23,7 @@ class BasicMetalView: MTKView, MetalPresenting {
     func configureMTKView() {
         colorPixelFormat = .bgra8Unorm
         // Our clear color, can be set to any color
-        clearColor = MTLClearColor(red: 0.1, green: 0.57, blue: 0.25, alpha: 1)
+        clearColor = MTLClearColor(red: 1, green: 0.57, blue: 0.25, alpha: 1)
     }
     
     func renderer(forDevice device: MTLDevice) -> MetalRendering {

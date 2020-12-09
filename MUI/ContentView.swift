@@ -5,14 +5,13 @@
 //  Created by Zach Eriksen on 12/7/20.
 //
 
+import MetalUI
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            MetalView {
-                BasicMetalView()
-            }
+        MetalView {
+            BasicMetalView()
         }
     }
 }

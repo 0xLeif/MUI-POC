@@ -5,6 +5,7 @@
 //  Created by Zach Eriksen on 12/7/20.
 //
 
+import MetalUI
 import MetalKit
 
 final class BasicMetalRenderer: NSObject, MetalRendering {
